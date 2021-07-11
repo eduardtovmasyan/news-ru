@@ -5,9 +5,16 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Image extends Model
+class ParserLog extends Model
 {
     use HasFactory;
+
+    /**
+     * The table associated with the model.
+     *
+     * @var string
+     */
+    protected $table = 'parser_log';
 
     /**
      * The attributes that are mass assignable.
@@ -15,11 +22,10 @@ class Image extends Model
      * @var array
      */
     protected $fillable = [
-        'news_id', 'path',
+        'request_method',
+        'url',
+        'response_http_code',
+        'response_body',
+        'created_at'
     ];
-
-    public function news()
-    {
-        return $this->belongsTo(News::class);
-    }
 }

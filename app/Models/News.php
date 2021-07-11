@@ -22,11 +22,13 @@ class News extends Model
      * @var array
      */
     protected $fillable = [
-        'title', 'url', 'description', 'publication_date', 'author',
+        'title',
+        'url',
+        'description',
+        'image_path',
+        'publication_date',
+        'author',
+        'created_at',
+        'updated_at'
     ];
-
-    public function images()
-    {
-        return $this->hasMany(Image::class);
-    }
 }

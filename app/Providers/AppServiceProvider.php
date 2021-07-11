@@ -13,7 +13,9 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+        $this->app->bind('news', 'App\Services\NewsService');
+        $this->app->bind('parser', 'App\Services\ParserService');
+        $this->app->bind('parserLog', 'App\Services\ParserLogService');
     }
 
     /**
