@@ -3,7 +3,6 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\NewsController;
-use App\Http\Controllers\ParserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,5 +20,5 @@ use App\Http\Controllers\ParserController;
 // });
 
 Route::resource('news', NewsController::class)->only([
-    'index', 'store', 'show', 'update', 'destroy'
+    'index', 'store', 'show',
 ]);
