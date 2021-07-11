@@ -1,32 +1,32 @@
 <template>
 <div>
-            <div class="profiles-details" v-if="news">
-                <div class="section-heading text-center">
-                    <h2>news</h2>
-                </div>
-                <div class="container">
-                    <div class="profiles-content">
-                        <div class="row">
-                            <div class="col-sm-3" v-for="item in news">
-                                <div class="single-profile profile-no-border">
-                                    <div class="profile-txt">
-                                        <a href=""><i class="flaticon-github-logo"></i></a>
-                                        <div  v-if="item.title.length < 20"> {{ item.title }}</div>
-  										<div  v-else>{{ item.title.substring(0,20)+".." }}</div>
-                                    </div>
-                                    <div class="single-profile-overlay">
-                                        <div class="profile-txt">
-                                            <a href="item.url"><i class="flaticon-github-logo"></i></a>
-                                            <div class="profile-icon-name">{{ item.description }}</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                    </div>
-                </div>
-            </div>
+    <div class="portfolio-details">
+        <div class="section-heading text-center">
+            <h2>News</h2>
+        </div>
+        <div class="container">
+            <div class="portfolio-content">
+                <div class="isotope">
+                    <div class="row">
+
+                        <div class="col-sm-4"  v-for="item in news">
+                            <div class="item">
+                                <img v-if="item.image_path" :src="item.image_path"/>
+                                <img v-else src="https://images-na.ssl-images-amazon.com/images/I/91IHWG8HUNL.png"/>
+                                <div class="isotope-overlay">
+                                    <a :href="item.url">
+                                        <span  v-if="item.title.length < 20"> {{ item.title }}</span>
+                                        <span  v-else>{{ item.title.substring(0,20)+".." }}</span>
+                                    </a>
+                                </div><!-- /.isotope-overlay -->
+                            </div><!-- /.item -->
+                        </div><!-- /.col -->
+
+                    </div><!-- /.row -->
+                </div><!--/.isotope-->
+            </div><!--/.gallery-content-->
+        </div><!--/.container-->
+    </div><!--/.portfolio-details-->
 </div>
 </template>
 <script>
@@ -53,8 +53,8 @@ export default{
               }
               })
               .then(response => {
-               		this.news = response.data.data;
-               		console.log(this.news)
+                    this.news = response.data.data;
+                    console.log(this.news)
               })
 
         },

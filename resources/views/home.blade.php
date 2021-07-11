@@ -63,14 +63,14 @@
 
         </header><!-- /.top-area-->
         <!-- top-area End -->
-    
-        <!--welcome-hero start -->
-        <section id="welcome-hero" class="welcome-hero">
+    <!--portfolio start -->
+        <section id="portfolio" class="portfolio">
+           
             <div id="app">
                 <front-page></front-page>
             </div>
-        </section><!--/.welcome-hero-->
-        <!--welcome-hero end -->
+        </section><!--/.portfolio-->
+        <!--portfolio end -->
         <!--about start -->
         <section id="about" class="about">
             <div class="section-heading text-center">
@@ -203,6 +203,17 @@
                                                 </div>
                                             </div>
                                             <h3>85%</h3>    
+                                        </div>
+                                    </div><!-- /.barWrapper -->
+                                    <div class="barWrapper">
+                                        <span class="progressText">Yii 2</span>
+                                        <div class="single-progress-txt">
+                                            <div class="progress ">
+                                                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="10" aria-valuemax="100" style="">
+                                                      
+                                                </div>
+                                            </div>
+                                            <h3>60%</h3>    
                                         </div>
                                     </div><!-- /.barWrapper -->
                                     <div class="barWrapper">

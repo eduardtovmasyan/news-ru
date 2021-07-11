@@ -37461,52 +37461,45 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", [
-    _vm.news
-      ? _c("div", { staticClass: "profiles-details" }, [
-          _vm._m(0),
-          _vm._v(" "),
-          _c("div", { staticClass: "container" }, [
-            _c("div", { staticClass: "profiles-content" }, [
-              _c(
-                "div",
-                { staticClass: "row" },
-                _vm._l(_vm.news, function(item) {
-                  return _c("div", { staticClass: "col-sm-3" }, [
-                    _c(
-                      "div",
-                      { staticClass: "single-profile profile-no-border" },
-                      [
-                        _c("div", { staticClass: "profile-txt" }, [
-                          _vm._m(1, true),
-                          _vm._v(" "),
-                          item.title.length < 20
-                            ? _c("div", [_vm._v(" " + _vm._s(item.title))])
-                            : _c("div", [
-                                _vm._v(
-                                  _vm._s(item.title.substring(0, 20) + "..")
-                                )
-                              ])
-                        ]),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "single-profile-overlay" }, [
-                          _c("div", { staticClass: "profile-txt" }, [
-                            _vm._m(2, true),
-                            _vm._v(" "),
-                            _c("div", { staticClass: "profile-icon-name" }, [
-                              _vm._v(_vm._s(item.description))
+    _c("div", { staticClass: "portfolio-details" }, [
+      _vm._m(0),
+      _vm._v(" "),
+      _c("div", { staticClass: "container" }, [
+        _c("div", { staticClass: "portfolio-content" }, [
+          _c("div", { staticClass: "isotope" }, [
+            _c(
+              "div",
+              { staticClass: "row" },
+              _vm._l(_vm.news, function(item) {
+                return _c("div", { staticClass: "col-sm-4" }, [
+                  _c("div", { staticClass: "item" }, [
+                    item.image_path
+                      ? _c("img", { attrs: { src: item.image_path } })
+                      : _c("img", {
+                          attrs: {
+                            src:
+                              "https://images-na.ssl-images-amazon.com/images/I/91IHWG8HUNL.png"
+                          }
+                        }),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "isotope-overlay" }, [
+                      _c("a", { attrs: { href: item.url } }, [
+                        item.title.length < 20
+                          ? _c("span", [_vm._v(" " + _vm._s(item.title))])
+                          : _c("span", [
+                              _vm._v(_vm._s(item.title.substring(0, 20) + ".."))
                             ])
-                          ])
-                        ])
-                      ]
-                    )
+                      ])
+                    ])
                   ])
-                }),
-                0
-              )
-            ])
+                ])
+              }),
+              0
+            )
           ])
         ])
-      : _vm._e()
+      ])
+    ])
   ])
 }
 var staticRenderFns = [
@@ -37515,23 +37508,7 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "section-heading text-center" }, [
-      _c("h2", [_vm._v("news")])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("a", { attrs: { href: "" } }, [
-      _c("i", { staticClass: "flaticon-github-logo" })
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("a", { attrs: { href: "item.url" } }, [
-      _c("i", { staticClass: "flaticon-github-logo" })
+      _c("h2", [_vm._v("News")])
     ])
   }
 ]
